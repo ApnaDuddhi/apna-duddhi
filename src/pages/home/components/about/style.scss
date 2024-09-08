@@ -1,0 +1,99 @@
+.about-us-container {
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .heading {
+    font-family: "Fasthand";
+    color: #0008c1;
+    margin-bottom: 30px;
+  }
+  .team-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    .team {
+      max-width: 300px;
+      max-height: 300px;
+      margin: 20px;
+      .l-img {
+        width: 100%;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        transition: 0.3s all;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        &:hover {
+          .l-caption {
+            transform: translateY(0%) scale(1);
+          }
+        }
+        .l-caption {
+          background-color: rgba(1, 4, 6, 0.45);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 10px 15px;
+          right: 0;
+          text-align: center;
+          z-index: 99;
+          transition: 0.3s all;
+          transform: translateY(150%) scale(1.5);
+          ul {
+            display: inline-block;
+            li {
+              display: inline-block;
+              a {
+                border-radius: 50%;
+                color: #095880;
+                display: inline-block;
+                margin: 0;
+                height: 28px;
+                text-align: center;
+                line-height: 30px;
+                width: 28px;
+                transition: 0.3s all;
+                &:hover {
+                  transform: scale(1.5);
+                }
+              }
+            }
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        @media (max-width: 768px) {
+          .l-caption {
+            transform: translateY(0%) scale(1);
+          }
+          li {
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .l-info {
+      text-align: center;
+      padding: 5px;
+      background-color: #000;
+
+      h5 {
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        color: #eaeaea;
+      }
+      p {
+        font-family: "Fasthand";
+        letter-spacing: 2px;
+        color: #eaeaea;
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+$primary-color: #333;
+$secondary-color: #007bff;
+$background-color: #ffe8af;
+$transition-speed: 0.5s;
+
+$header-height: 3.5rem;
+$first-color: hsl(28, 88%, 62%);
+$title-color: hsl(0, 0%, 95%);
+$text-color: hsl(0, 0%, 75%);
+$body-color: hsl(0, 0%, 6%);
+$body-font: "Montserrat", sans-serif;
+$second-font: "Dancing Script", cursive;
+$h2-font-size: 1.25rem;
+$small-font-size: 0.813rem;
+$font-semi-bold: 600;
+$z-tooltip: 10;
+$z-fixed: 100;
+
+.header {
+  background-color: $background-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $primary-color;
+  text-decoration: none;
+  img {
+    height: 80px;
+    width: 160px;
+    padding-left: 1rem;
+    mix-blend-mode: multiply;
+  }
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: $primary-color;
+  text-decoration: none;
+  margin: 0.5rem;
+  transition: color $transition-speed ease;
+
+  &:hover {
+    color: $first-color;
+  }
+}
+
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: $primary-color;
+    transition: all $transition-speed ease;
+  }
+}
+
+.nav-side {
+  position: fixed;
+  right: -300px;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: $background-color;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right $transition-speed ease;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  z-index: 999;
+
+  &.active {
+    right: 0;
+  }
+
+  .nav-link {
+    border-bottom: 1px solid $primary-color;
+    height: 40px;
+    &:first-child {
+      // border-top: 1px solid $primary-color;
+    }
+    &:hover {
+      color: $first-color;
+      font-weight: bolder;
+      border-bottom: 2px solid $first-color;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    // display: none;
+    // z-index: 9999;
+  }
+
+  .nav-toggle {
+    display: block;
+    z-index: 9999;
+  }
+}
