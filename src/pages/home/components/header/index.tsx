@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
@@ -15,15 +15,18 @@ const Header: React.FC = () => {
   const [hiddenItems, setHiddenItems] = useState<MenuItem[]>([]);
   const headerRef = useRef<HTMLDivElement>(null);
 
-  const menuItems: MenuItem[] = [
-    { name: "Services", path: "/" },
-    { name: "Quotes", path: "/about" },
-    { name: "Our Sponsored", path: "/services" },
-    { name: "A step to better tomorrow", path: "/blog" },
-    { name: "Careers", path: "/careers" },
-    { name: "About Us", path: "/products" },
-    { name: "Contact", path: "/contact" },
-  ];
+  const menuItems: MenuItem[] = useMemo(
+    () => [
+      { name: "Services", path: "/" },
+      { name: "Quotes", path: "/about" },
+      { name: "Our Sponsored", path: "/services" },
+      { name: "A step to better tomorrow", path: "/blog" },
+      { name: "Careers", path: "/careers" },
+      { name: "About Us", path: "/products" },
+      { name: "Contact", path: "/contact" },
+    ],
+    []
+  );
 
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
@@ -59,7 +62,8 @@ const Header: React.FC = () => {
     return () => {
       window.removeEventListener("resize", updateVisibleItems);
     };
-  }, []);
+  }, [menuItems]);
+
   useEffect(() => {
     console.log("====================================");
     console.log("visibleItems", visibleItems);
@@ -68,7 +72,7 @@ const Header: React.FC = () => {
       // setHiddenItems(menuItems);
       setIsMenuOpen(false);
     }
-  }, [visibleItems, hiddenItems]);
+  }, [visibleItems, hiddenItems, menuItems.length]);
 
   return (
     <header className="header" ref={headerRef}>
