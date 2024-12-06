@@ -4,16 +4,18 @@ import DATA from "./data.json";
 
 const InspiringQuotes = () => {
   const [quoteIndex, setQuoteIndex] = useState(0);
+  const [forcedIndex, setForcedIndex] = useState(0);
 
   // Change quotes continuously with an interval
   useEffect(() => {
+    setQuoteIndex(forcedIndex);
     const interval = setInterval(() => {
       setQuoteIndex((prevIndex) =>
         prevIndex === DATA.length - 1 ? 0 : prevIndex + 1
       );
-    }, 10000); // Change every 5 seconds
+    }, 15000); // Change every 15 seconds
     return () => clearInterval(interval);
-  }, []);
+  }, [forcedIndex]);
 
   return (
     <div className="inspiring-container">
@@ -27,11 +29,16 @@ const InspiringQuotes = () => {
           {DATA.map((quote, index) => {
             return (
               <div
-                className={`circle ${
-                  index === quoteIndex ? "active" : "disable"
-                }`}
-                key={quote.id}
-              />
+                className="circle-wrapper"
+                onClick={() => setForcedIndex(index)}
+              >
+                <div
+                  className={`circle ${
+                    index === quoteIndex ? "active" : "disable"
+                  }`}
+                  key={quote.id}
+                />
+              </div>
             );
           })}
         </div>
