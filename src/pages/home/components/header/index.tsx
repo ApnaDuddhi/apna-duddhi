@@ -65,9 +65,9 @@ const Header: React.FC = () => {
   }, [menuItems]);
 
   useEffect(() => {
-    console.log("====================================");
-    console.log("visibleItems", visibleItems);
-    console.log("====================================");
+    // console.log("====================================");
+    // console.log("visibleItems", visibleItems);
+    // console.log("====================================");
     if (visibleItems.length === menuItems.length) {
       // setHiddenItems(menuItems);
       setIsMenuOpen(false);
