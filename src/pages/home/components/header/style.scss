@@ -94,7 +94,7 @@ $z-fixed: 100;
     border-bottom: 1px solid $primary-color;
     height: 40px;
     &:first-child {
-      // border-top: 1px solid $primary-color;
+      border-top: 1px solid $primary-color;
     }
     &:hover {
       color: $first-color;

@@ -1,0 +1,28 @@
+.youtube-container {
+  height: 300px;
+
+  .heading {
+    font-family: "Fasthand";
+    color: #c10057;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .youtube-section {
+    .section-title {
+      font-size: 16px;
+      font-weight: 900;
+      color: #7099ff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .video-icon {
+      margin: 16px;
+    }
+    .link {
+      width: auto;
+      font-size: small;
+      font-style: italic;
+    }
+  }
+}
