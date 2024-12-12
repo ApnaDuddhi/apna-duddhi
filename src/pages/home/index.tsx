@@ -1,19 +1,25 @@
 import React from "react";
 
-import "./style.css";
-import { About, Header, InspiringQuotes, Youtube } from "./components";
+import "./style.scss";
+import {
+  About,
+  ApnaDuddhi,
+  Header,
+  InspiringQuotes,
+  Youtube,
+} from "./components";
 
 const Home = () => {
   return (
     <div>
       <Header />
       <InspiringQuotes />
-      <div style={{border: '2px solid pink'}}>
+      <div style={{ border: "2px solid pink" }}>
         <Youtube />
       </div>
+      <ApnaDuddhi />
       <About />
       {/* <p>home</p> */}
-
     </div>
   );
 };
