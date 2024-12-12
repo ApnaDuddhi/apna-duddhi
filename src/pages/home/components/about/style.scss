@@ -4,10 +4,73 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0 1rem;
+
   .heading {
     font-family: "Fasthand";
     color: #0008c1;
+    margin-top: 20px;
     margin-bottom: 30px;
+  }
+
+  .about-us-wrapper {
+    .point-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .title {
+        display: block;
+        width: 100%;
+      }
+
+      .point-card {
+        width: 44%;
+        margin: 2% 3%;
+        border: 1px solid #858585;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        .title {
+          text-align: center;
+          padding: 0.5rem 0;
+          font-size: 1.3rem;
+          background-color: rgb(47, 47, 47);
+          color: #ffffff;
+        }
+        .des {
+          padding: 0.6rem 0.5rem;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  .mission-wrapper {
+    .point-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .title {
+        display: block;
+        width: 100%;
+      }
+      .point-card {
+        width: 100%;
+        .title {
+          padding: 0.5rem .3rem;
+          padding-bottom: .2rem;
+          font-size: 1.3rem;
+          color: #000000;
+          font-weight: 600;
+        }
+        .des {
+          padding: .1rem 0.5rem;
+          margin-left: 1rem;
+          font-style: italic;
+
+        }
+      }
+    }
   }
   .team-container {
     width: 100%;
