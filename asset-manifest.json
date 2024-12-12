@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/apna-duddhi/static/css/main.4f26dbb4.css",
-    "main.js": "/apna-duddhi/static/js/main.073a67b8.js",
+    "main.css": "/apna-duddhi/static/css/main.052c70c7.css",
+    "main.js": "/apna-duddhi/static/js/main.83918c71.js",
     "static/js/453.db2490ec.chunk.js": "/apna-duddhi/static/js/453.db2490ec.chunk.js",
     "static/media/youtube-full.png": "/apna-duddhi/static/media/youtube-full.f38f57049744e177f6a8.png",
     "static/media/logo.png": "/apna-duddhi/static/media/logo.85406021ad139ed9bce5.png",
     "static/media/sky.png": "/apna-duddhi/static/media/sky.c2787f1b1ad55d47553e.png",
     "index.html": "/apna-duddhi/index.html",
-    "main.4f26dbb4.css.map": "/apna-duddhi/static/css/main.4f26dbb4.css.map",
-    "main.073a67b8.js.map": "/apna-duddhi/static/js/main.073a67b8.js.map",
+    "main.052c70c7.css.map": "/apna-duddhi/static/css/main.052c70c7.css.map",
+    "main.83918c71.js.map": "/apna-duddhi/static/js/main.83918c71.js.map",
     "453.db2490ec.chunk.js.map": "/apna-duddhi/static/js/453.db2490ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f26dbb4.css",
-    "static/js/main.073a67b8.js"
+    "static/css/main.052c70c7.css",
+    "static/js/main.83918c71.js"
   ]
 }
