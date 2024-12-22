@@ -1,7 +1,7 @@
 {
   "name": "apna-dudhi",
   "version": "0.1.0",
-  "homepage": "https://apnaduddhi.github.io/apna-duddhi/",
+  "homepage": "https://apnaduddhi.github.io/apna-duddhi",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
