@@ -2,10 +2,10 @@ import React from "react";
 import { villages } from "./helper";
 import "./styles.scss";
 
-const website = [{
-  title: "",
-  url: ""
-}]
+// const website = [{
+//   title: "",
+//   url: ""
+// }]
 
 const ApnaDuddhi = () => {
   return (
