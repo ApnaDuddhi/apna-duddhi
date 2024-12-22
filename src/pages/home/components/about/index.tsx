@@ -56,7 +56,7 @@ const About = () => {
           <p className="italic">{AboutUs}</p>
         </div>
         <div className="mission-wrapper">
-          <h3 className="heading max-font">Our mission</h3>
+          <h3 className="heading max-font center">Our mission</h3>
           <p className="italic">{missionStatement}</p>
           <p className="italic">{missionStatement2}</p>
           <div className="point-wrapper">
@@ -78,22 +78,22 @@ const About = () => {
         <div className="about-us-wrapper">
           <div className="point-wrapper">
             {coreValues[0].point?.points.map((_item) => (
-              <div className="point-card">
-                <p className="title">{Object.keys(_item)[0]}</p>
-                <p className="des">{Object.values(_item)[0]}</p>
+              <div className="core-val-wrapper">
+                <p className="core-val-title">{Object.keys(_item)[0]}</p>
+                <p className="core-val-des">{Object.values(_item)[0]}</p>
               </div>
             ))}
             {coreValues2[0].point?.points.map((_item) => (
-              <div className="point-card">
-                <p className="title">{Object.keys(_item)[0]}</p>
-                <p className="des">{Object.values(_item)[0]}</p>
+              <div className="core-val-wrapper">
+                <p className="core-val-title">{Object.keys(_item)[0]}</p>
+                <p className="core-val-des">{Object.values(_item)[0]}</p>
               </div>
             ))}
           </div>
           <p className="italic">{AboutUs}</p>
         </div>
         <div>
-          <h3 className="heading max-font">Our Promise</h3>
+          <h3 className="heading max-font center">Our Promise</h3>
           <p>{ourPromise}</p>
         </div>
 
